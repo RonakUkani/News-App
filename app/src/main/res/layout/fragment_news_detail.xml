@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:clickable="false"
+    android:focusable="false"
+   >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_bottom_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNewsTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/imageViewBack"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_round_transparent"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/image_back"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNewsCompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:fontFamily="@font/robotoslab_bold"
+        android:layoutDirection="ltr"
+        android:maxLines="2"
+        android:shadowColor="#55000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="6"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNewsDate"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNewsDescription"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        tools:text="Vox.com" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNewsDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/robotoslab_regular"
+        android:textAlignment="viewEnd"
+        android:layoutDirection="ltr"
+        android:maxLines="2"
+        android:shadowColor="#55000000"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="6"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNewsCompany"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/textViewNewsCompany"
+        app:layout_constraintTop_toTopOf="@+id/textViewNewsCompany"
+        tools:text="2020-12-51" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNewsTitle"
+        android:layout_width="0dp"
+        android:shadowDx="6"
+        android:shadowDy="6"
+        android:shadowRadius="6"
+        android:paddingTop="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:fontFamily="@font/robotoslab_regular"
+        android:layoutDirection="ltr"
+        android:shadowColor="#55000000"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNewsCompany"
+        app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        tools:text="asdobaijsd kjas as kdj askj jkas djkakjsd jka dsjka sdkj jkasd jkas aksd jkas a kdjs asdjk" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewNewsDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/robotoslab_regular"
+        android:layoutDirection="ltr"
+        android:textColor="@color/colorMediumFont"
+        android:textSize="@dimen/_12ssp"
+        android:shadowColor="#55000000"
+
+        android:shadowRadius="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideLineEnd"
+        app:layout_constraintStart_toEndOf="@id/guideLineStart"
+        tools:text="asdobaijsd kjas as kdj askj jkas djkakjsd jka dsjka sdkj jkasd jkas aksd jkas a kdjs asdjk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
